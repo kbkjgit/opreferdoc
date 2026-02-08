@@ -8,8 +8,20 @@
     <title>oprefer</title>
 </head>
 <body>
-    <iframe style="width: 100%; height: 100vh;" scrolling="yes" src="https://script.google.com/macros/s/AKfycbwGdyloXb_Ct1gJWPbJUFSJihlBBEvqHo0Uw5cJeWbWWeu7WyW4lRsYZvgwdMdutjse/exec" frameborder="0"></iframe>
+    <iframe  id="myIframe" style="width: 100%; height: 100vh;" scrolling="yes"  frameborder="0"></iframe>
 </body>
+     <script>
+            let myIframe = document.getElementById("myIframe");
+            let endpoint = "https://script.google.com/macros/s/AKfycbyClSNpAmegrnOnZ7EU4QxNr9-_2C8VeVhu1v2VW3SDdvxq6YNvyzfder-uzS7YAGjP/exec";
+            let url_string = window.location.href;
+            let url = new URL(url_string);
+            console.log(url_string);
+            let branch = url.searchParams.get("br");
+            console.log(size);
+            let adsURL = endpoint+"?br="+branch;
+            console.log(adsURL);
+            myIframe.src = adsURL;
+        </script>
 </html>
 
 
